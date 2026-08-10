@@ -1,1 +1,428 @@
+* {
+    box-sizing: border-box;
+}
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #20202f;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==============================
+   CODE WINDOWS
+   ============================== */
+
+.code-window {
+    position: absolute;
+
+    width: 410px;
+
+    background: #20202f;
+
+    border: 1px solid #737386;
+
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    z-index: 10;
+}
+
+
+/* LEFT CODE WINDOW */
+
+.left-code {
+    left: 45px;
+    bottom: 30px;
+}
+
+
+/* RIGHT CODE WINDOW */
+
+.right-code {
+    right: 45px;
+    top: 30px;
+}
+
+
+/* ==============================
+   WINDOW HEADER
+   ============================== */
+
+.window-title {
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 14px;
+
+    border-bottom: 1px solid #555568;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    margin-right: 7px;
+}
+
+.red {
+    background: #ff5f57;
+}
+
+.yellow {
+    background: #ffbd2e;
+}
+
+.green {
+    background: #28c840;
+}
+
+.filename {
+    margin-left: 12px;
+
+    color: #c6c6d0;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   CODE
+   ============================== */
+
+pre {
+    margin: 0;
+
+    padding: 22px;
+
+    font-family: Consolas, Monaco, monospace;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    white-space: pre-wrap;
+}
+
+
+/* ==============================
+   CENTER ANIMATION
+   ============================== */
+
+.animation-container {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 560px;
+    height: 220px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 5;
+}
+
+
+/* ==============================
+   WHITE LINES
+   ============================== */
+
+.side-line {
+    position: absolute;
+
+    width: 8px;
+    height: 160px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.left-line {
+    left: 40px;
+
+    animation: leftLineAnimation 4s ease-in-out infinite;
+}
+
+.right-line {
+    right: 40px;
+
+    animation: rightLineAnimation 4s ease-in-out infinite;
+}
+
+
+/* ==============================
+   TEXT
+   ============================== */
+
+.message {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    white-space: nowrap;
+
+    font-size: 58px;
+
+    font-weight: 700;
+
+    z-index: 20;
+}
+
+.letter {
+    color: #a5a9c7;
+}
+
+.heart {
+    color: #ed4b52;
+
+    font-size: 65px;
+
+    line-height: 1;
+}
+
+
+/* ==============================
+   I ANIMATION
+   ============================== */
+
+.i {
+    animation: iAnimation 4s infinite;
+}
+
+@keyframes iAnimation {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ==============================
+   HEART ANIMATION
+   ============================== */
+
+.heart {
+    animation: heartAnimation 4s infinite;
+}
+
+@keyframes heartAnimation {
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    15% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ==============================
+   LOVE ANIMATION
+   ============================== */
+
+.love {
+    animation: loveAnimation 4s infinite;
+}
+
+@keyframes loveAnimation {
+
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    45% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==============================
+   YOU ANIMATION
+   ============================== */
+
+.you {
+    animation: youAnimation 4s infinite;
+}
+
+@keyframes youAnimation {
+
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    45% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ==============================
+   SIDE LINE ANIMATION
+   ============================== */
+
+@keyframes leftLineAnimation {
+
+    0% {
+        height: 0;
+    }
+
+    20% {
+        height: 160px;
+    }
+
+    100% {
+        height: 160px;
+    }
+}
+
+@keyframes rightLineAnimation {
+
+    0% {
+        height: 0;
+    }
+
+    20% {
+        height: 160px;
+    }
+
+    100% {
+        height: 160px;
+    }
+}
+
+
+/* ==============================
+   SOUND
+   ============================== */
+
+.sound {
+    position: fixed;
+
+    right: 25px;
+    bottom: 20px;
+
+    color: #a5a9c7;
+
+    font-size: 22px;
+
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .code-window {
+        transform: scale(0.65);
+    }
+
+    .left-code {
+        left: -60px;
+        bottom: -20px;
+
+        transform-origin: bottom left;
+    }
+
+    .right-code {
+        right: -60px;
+        top: -20px;
+
+        transform-origin: top right;
+    }
+
+    .animation-container {
+        transform: translate(-50%, -50%) scale(0.75);
+    }
+}
