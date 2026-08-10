@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Animation loaded successfully");
+    console.log("I Love You animation started");
 });
