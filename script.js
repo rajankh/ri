@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Animation loaded");
+    console.log("Animation loaded successfully");
 });
