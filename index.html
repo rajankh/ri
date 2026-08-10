@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>CSS Animation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LEFT CODE WINDOW -->
+    <div class="code-window left-code">
+
+        <div class="window-title">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+
+            <span class="filename">style.css</span>
+        </div>
+
+        <pre><code>.container {
+  width: 50rem;
+  height: 20rem;
+  position: relative;
+}
+
+.svg-container {
+  z-index: 2;
+  position: absolute;
+}
+
+.mo-container {
+  width: 100%;
+  height: 100%;
+}
+
+.line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}</code></pre>
+
+    </div>
+
+
+    <!-- RIGHT CODE WINDOW -->
+    <div class="code-window right-code">
+
+        <div class="window-title">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+
+            <span class="filename">style.css</span>
+        </div>
+
+        <pre><code>.letter {
+  fill: #a5a9c7;
+}
+
+.sound {
+  position: fixed;
+  color: #a5a9c7;
+  font-size: 1.6rem;
+  bottom: 1rem;
+  right: 1rem;
+  text-decoration: underline;
+}
+
+.sound-off {
+  text-decoration: line-through;
+}</code></pre>
+
+    </div>
+
+
+    <!-- CENTER ANIMATION -->
+    <div class="animation-container">
+
+        <div class="side-line left-line"></div>
+
+        <div class="message">
+
+            <span class="letter i">I</span>
+
+            <span class="heart">♥</span>
+
+            <span class="letter love">LOVE</span>
+
+            <span class="letter you">YOU</span>
+
+        </div>
+
+        <div class="side-line right-line"></div>
+
+    </div>
+
+
+    <!-- SOUND -->
+    <div class="sound">
+        🔊 Sound
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
